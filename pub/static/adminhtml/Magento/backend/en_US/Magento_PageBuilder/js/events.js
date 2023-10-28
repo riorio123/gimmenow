@@ -1,0 +1,1 @@
+/Users/admin/magento3/vendor/magento/module-page-builder/view/base/web/js/events.js
