@@ -1,1 +1,0 @@
-/Users/admin/magento3/vendor/magento/module-catalog/view/adminhtml/web/js/components/new-category.js

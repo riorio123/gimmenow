@@ -1,1 +1,0 @@
-/Users/admin/magento3/lib/web/jquery/spectrum/tinycolor.js
