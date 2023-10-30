@@ -1,6 +1,6 @@
 # gimmenow
 ## Installation requirements:
-================================================================================================
+====================================================================================
 - Operating system
 Distributions of Linux, including RedHat Enterprise Linux (RHEL), CentOS, Ubuntu, Debian, macOS.
 - Memory requirement
@@ -19,7 +19,7 @@ Opensearch
 - Opensearch 2.11.0
 
 ## Installation on MacOS locally:
-================================================================================================
+====================================================================================
 **Note:**
 **MacOs with _M1_ _chip_ can use command "arch -x86_64" before "brew install" command.**
 **Ex: arch -x86_64 brew install httpd**
