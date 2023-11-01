@@ -1,0 +1,92 @@
+<!-- 
+    This template shows a registration page to the user.
+    This page is only shown if the registration status is 
+    not set in the system.
+-->
+
+<?php
+    $currentAdminUser = $this->getCurrentAdminUser()->getData();
+    $userEmail = $currentAdminUser['email'];
+    $firstName = $currentAdminUser['firstname'];
+    $lastName = $currentAdminUser['lastname'];
+    $site = $this->getBaseUrl();
+
+    $formKey = $this->getBlockHtml('formkey');
+
+    echo '
+    
+
+    <div class="page" id="register">
+    <form name="f" method="post" action="" id="register-form">
+            '.$formKey.'  
+            <input type="hidden" name="option" value="registerNewUser" >
+            <div class="mo_idp_table_layout">
+                <h3>REGISTER WITH MINIORANGE</h3><hr>
+
+                <div class="mo_note">
+                <input type="checkbox" id="registered" name="registered" value="isChecked" onclick="ifUserRegistered()"> Already Registered<br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row" id="email">
+                        <div class="col-sm-2  row1 labels" style="display:inline">
+                            <label ><b>Email :</b></label>
+                        </div>
+                        <div class="col-sm-10  row1" >
+                            <input style="height:120%; width:150%;" class="mosp_table_textbox register_textboxes"  type="email" name="email" required  value="'.$userEmail.'" placeholder="person@example.com">
+                        </div>
+                    </div>
+
+                    <div class="row" id="firstName">
+                        <div class="col-sm-2 row1 labels">
+                            <label class="labels"><b>First Name :</b></label>
+                        </div>
+                        <div class="col-sm-8 row1">
+                            <input style="height:120%; width:150%;" class="mosp_table_textbox register_textboxes" type="text" name="firstName" placeholder="First Name" value="'.$firstName.'"  >
+                        </div>
+                    </div>
+                    <div class="row" id="lastName">
+                        <div class="col-sm-2 row1 labels">
+                            <label class="labels"><b>Last Name :</b></label>
+                        </div>
+                        <div class="col-sm-8 row1">
+                            <input style="height:120%; width:150%;" class="mosp_table_textbox register_textboxes" type="text" name="lastName" value="'.$lastName.'" placeholder="Last Name" >
+                        </div>
+                    </div>
+                    <div class="row" id="company">
+                        <div class="col-sm-2 row1 labels">
+                            <label class="labels"><b>Site/Organization :</b></label>
+                        </div>
+                        <div class="col-sm-8 row1">
+                            <input style="height:120%; width:150%;" class="mosp_table_textbox register_textboxes" required placeholder="Last Name"  type="text" name="companyName" value="'.$site.'" >
+                        </div>
+                    </div>
+                    <div class="row" id="password">
+                        <div class="col-sm-2 row1 labels">
+                            <label class="labels"><b>Password :</b></label>
+                        </div>
+                        <div class="col-sm-8 row1">
+                            <input style="height:120%; width:150%;" class="mosp_table_textbox register_textboxes" required type="password" name="password" placeholder="Choose your password (Min. length 6)" >
+                        </div>
+                    </div>
+                    <div class="row" id="confirmPassword">
+                        <div class="col-sm-2 row1 labels">
+                            <label class="labels"><b>Confirm Password :</b></label>
+                        </div>
+                        <div class="col-sm-8 row1">
+                            <input style="height:120%; width:150%;" class="mosp_table_textbox register_textboxes" type="password" name="confirmPassword" placeholder="Confirm your password" >
+                        </div>   
+                    </div>
+                    &nbsp; 
+                    <input type="submit" class="btn-round" name="submit" value="Register/Login" style="width:150px;margin-left: -0.5%;margin-top:2%;"
+                             >           
+                </div>
+           </div>
+        </form>
+        </div>
+</div>';
+?>
+
+
+

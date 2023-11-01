@@ -1,0 +1,37 @@
+{
+    "name": "miniorange_inc/miniorange-oauth-sso",
+    "description": "miniOrange Magento OAuth OpenID Connect Single Sign-On (SSO) extension support login into Magento using any OAuth or OpenID Connect provider Azure AD, AzureB2C, Okta, Salesforce, AWS Cognito, Auth0, Keycloak, Google etc.",
+    "keywords": ["OAuth", "Service Provider", "Identity Provider", "SSO", "Single Sign On", "Authentication","Magento sso",
+        "Magento 2 sso",
+       "Magento 2 single sign-on",
+       "Magento single sign-on",
+       "magento oauth sso",
+       "magento oauth",
+       "magento oauth single sign on",
+       "magento 2 oauth",
+       "oauth magento 2",
+       "magento oauth 2.0",
+       "magento 2 oauth 2.0"],
+
+    "type": "magento2-module",
+    "version": "4.1.1",
+     "license": [
+        "Commercial"
+    ],
+     "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "MiniOrange\\OAuth\\": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "miniOrange Team",
+            "homepage": "https://www.miniorange.com/",
+            "email": "magentosupport@xecurify.com"
+        }
+    ],
+    "support": {
+        "email": "magentosupport@xecurify.com"
+    }
+}
